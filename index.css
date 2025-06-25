@@ -1,14 +1,58 @@
 :root {
-  --color-primary: hsl(350, 50%, 90%);
+  --bg-dark: hsl(1 37% 2%);
+  --bg: hsl(1 23% 5%);
+  --bg-light: hsl(2 13% 10%);
+  --bg-xl-light: hsl(0, 10%, 30%);
+
+  --text: hsl(2 100% 96%);
+  --text-muted: hsl(2 12% 71%);
+  --highlight: hsl(2 8% 40%);
+
+  --border: hsl(2 10% 29%);
+  --border-muted: hsl(1 14% 19%);
+
+  --primary: hsl(0, 15%, 20%);
+
+  --secondary: hsl(108, 40%, 40%);
+  --secondary-dark: hsl(108, 40%, 20%);
+
+  --danger: hsl(0, 50%, 50%);
+  --danger-dark: hsl(0, 50%, 40%);
+
+  /* --warning: hsl(52 19% 57%); */
+  /* --success: hsl(146 17% 59%); */
+  /* --info: hsl(217 28% 65%); */
+  /* --color-primary: hsl(350, 50%, 90%);
   --color-secondary: hsl(350, 50%, 10%);
   --color-tertiary: hsl(50, 80%, 20%);
-  --color-accent: hsl(290, 80%, 20%);
+  --color-accent: hsl(290, 80%, 20%); */
 }
-.dark {
-  --color-primary: hsl(350, 50%, 10%);
+.light{
+  --bg-dark: hsl(1 37% 98%);
+  --bg: hsl(1 23% 95%);
+  --bg-light: hsl(2 13% 90%);
+  --bg-xl-light: hsl(0, 10%, 70%);
+
+  --text: hsl(2 100% 4%);
+  --text-muted: hsl(2 12% 30%);
+  --highlight: hsl(2 8% 60%);
+
+  --border: hsl(2 10% 70%);
+  --border-muted: hsl(1 14% 80%);
+
+  --primary: hsl(0, 15%, 80%);
+
+  --secondary: hsl(108, 40%, 60%);
+  --secondary-dark: hsl(108, 40%, 80%);
+
+  --danger: hsl(0, 50%, 50%);
+  --danger-dark: hsl(0, 50%, 60%);
+
+
+  /* --color-primary: hsl(350, 50%, 10%);
   --color-secondary: hsl(350, 50%, 90%);
   --color-tertiary: hsl(50, 80%, 80%);
-  --color-accent: hsl(290, 80%, 80%);
+  --color-accent: hsl(290, 80%, 80%); */
 }
 
 * {
@@ -21,7 +65,7 @@ html {
 }
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--color-accent);
+  background-color: var(--bg);
   color: white;
 }
 main {
@@ -29,16 +73,16 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
 .container {
-  background-color: var(--color-secondary);
+  background-color: var(--bg-light);
+  box-shadow: 2px 2px 8px var(--border);
   padding: 10rem;
   border-radius: 8px;
   max-width: 100rem;
   width: 90%;
-
-  /* display: flex; */
 }
 /* add__task */
 .add__task {
@@ -51,39 +95,80 @@ main {
   width: 100%;
   font-size: 2.4rem;
 }
+.user__input::placeholder {
+  font-size: 1.6rem;
+  padding: 1rem;
+}
 
 /* todo list  */
-.buttons{
-    display: flex;
-    gap: 1rem;
+.buttons {
+  display: flex;
+  gap: 1rem;
 }
 /* components */
 .btn {
   padding: 0.75rem 1rem;
+  /* width: 100%; */
+  width: 10rem;
   font-size: 1.5rem;
+  transition: 0.1s;
+  /* box-shadow: 2px 2px 8px var; */
 }
+
 .btn__primary {
-  color: var(--color-primary);
-  background-color: var(--color-accent);
+  color: var(--text);
+  background-color: var(--bg-xl-light);
+  box-shadow: 2px 2px 2px var(--border);
 }
-.todo__list{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.btn__primary:hover {
+  background-color: var(--primary);
+  /* box-shadow: 2px 2px 2px var(--); */
+}
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  max-height: 50vh;
 }
 .todo__items {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background-color: var(--color-accent);
+  background-color: var(--bg-xl-light);
   padding: 1rem 2rem;
   border-radius: 8px;
   justify-content: space-between;
 }
 
-
 .todo__task {
   font-size: 2rem;
 }
+.edit-btn {
+  background-color: var(--secondary);
+  color: var(--text);
+  box-shadow: 2px 2px 2px var(--highlight);
+}
+.edit-btn:hover {
+  background-color: var(--secondary-dark);
+}
+.remove-btn {
+  background-color: var(--danger);
+  color: var(--text);
+  box-shadow: 2px 2px 2px var(--highlight);
+}
+.remove-btn:hover {
+  background-color: var(--danger-dark);
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2rem;
+    
+}
 
+.toggle__img{
+    width: 6rem;
 
+}

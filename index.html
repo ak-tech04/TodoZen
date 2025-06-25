@@ -7,21 +7,27 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <main>
+      <main>
+        <div class="toggle">
+            <!-- toggle light mode -->
+             <img class="toggle__img" src="toggle.svg" alt="toogle icon">
+        </div>
+
       <div class="container">
-        <form action="#" class="add__task">
-          <input class="user__input" type="text" />
-          <button type="submit" class="btn add-btn">Add Task</button>
+        <form action="" class="add__task">
+          <input class="user__input" type="text" placeholder="Add Task"/>
+          <button type="submit" class="btn add-btn btn__primary">Add Task</button>
         </form>
         <div class="todo__list">
-          <!-- <div class="todo__items">
+            <!-- demo list Add tasks / task card are created in js dynamcally -->
+          <div class="todo__items">
             <p class="todo__task"> Your todo list task </p>
             <div class="buttons">
                 <button class="btn edit-btn">Edit</button>
                 <button class="btn remove-btn">Remove</button>
             </div>
                 
-          </div> -->
+          </div>
         </div>
       </div>
     </main>

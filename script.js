@@ -3,12 +3,22 @@ let userTask = document.querySelector(".user__input");
 let taskList = document.querySelector(".todo__list");
 let addTask = document.querySelector(".add-btn");
 
+// toggle background
+let body = document.querySelector("body");
+let toggle = document.querySelector(".toggle__img");
+
+// adding task to the list
 addTask.addEventListener("click", (event) => {
   event.preventDefault();
-  userInput = userTask.value;
-  createTask(userInput);
+  userInput = userTask.value.trim();
+  if (userInput.length > 0) {
+    createTask(userInput);
+  } else {
+    alert("Don't Enter Empty task");
+  }
 });
 
+// edit and remove btn
 taskList.addEventListener("click", (event) => {
   const classList = Array.from(event.target.classList);
   if (classList.includes("edit-btn")) {
@@ -19,6 +29,15 @@ taskList.addEventListener("click", (event) => {
     // console.log("remove btn clicked");
     const btn = event.target;
     removeBtn(btn);
+  }
+});
+
+// toggle mode
+toggle.addEventListener("click", (e) => {
+  if (body.classList.contains("light")) {
+    body.classList.remove("light");
+  } else {
+    body.classList.add("light");
   }
 });
 
