@@ -19,13 +19,7 @@
   --danger: hsl(0, 50%, 50%);
   --danger-dark: hsl(0, 50%, 40%);
 
-  /* --warning: hsl(52 19% 57%); */
-  /* --success: hsl(146 17% 59%); */
-  /* --info: hsl(217 28% 65%); */
-  /* --color-primary: hsl(350, 50%, 90%);
-  --color-secondary: hsl(350, 50%, 10%);
-  --color-tertiary: hsl(50, 80%, 20%);
-  --color-accent: hsl(290, 80%, 20%); */
+
 }
 .light{
   --bg-dark: hsl(1 37% 98%);
@@ -49,10 +43,6 @@
   --danger-dark: hsl(0, 50%, 60%);
 
 
-  /* --color-primary: hsl(350, 50%, 10%);
-  --color-secondary: hsl(350, 50%, 90%);
-  --color-tertiary: hsl(50, 80%, 80%);
-  --color-accent: hsl(290, 80%, 80%); */
 }
 
 * {
@@ -165,7 +155,7 @@ main {
     top: 0;
     right: 0;
     margin-right: 2rem;
-    
+
 }
 
 .toggle__img{
