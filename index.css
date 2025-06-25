@@ -1,0 +1,89 @@
+:root {
+  --color-primary: hsl(350, 50%, 90%);
+  --color-secondary: hsl(350, 50%, 10%);
+  --color-tertiary: hsl(50, 80%, 20%);
+  --color-accent: hsl(290, 80%, 20%);
+}
+.dark {
+  --color-primary: hsl(350, 50%, 10%);
+  --color-secondary: hsl(350, 50%, 90%);
+  --color-tertiary: hsl(50, 80%, 80%);
+  --color-accent: hsl(290, 80%, 80%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-accent);
+  color: white;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--color-secondary);
+  padding: 10rem;
+  border-radius: 8px;
+  max-width: 100rem;
+  width: 90%;
+
+  /* display: flex; */
+}
+/* add__task */
+.add__task {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.user__input {
+  width: 100%;
+  font-size: 2.4rem;
+}
+
+/* todo list  */
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+/* components */
+.btn {
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+}
+.btn__primary {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+}
+.todo__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.todo__items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--color-accent);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+
+.todo__task {
+  font-size: 2rem;
+}
+
+
